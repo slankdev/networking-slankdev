@@ -61,6 +61,8 @@ openstack port show -f json slankdev-port0
   "trunk_details": null,
   "updated_at": "2020-09-22T04:20:57Z"
 }
+
+openstack server create --flavor m1.small --image cirros-0.5.1-x86_64-disk --nic net-id=$(openstack network show slankdev-net0 -f value -c id) test
 ```
 
 ## References
